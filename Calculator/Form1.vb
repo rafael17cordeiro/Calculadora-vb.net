@@ -115,31 +115,31 @@ Public Class Form1
         igual = 0
         vezes += 1
         num = Label_res.Text
-        If add <> 1 And dividir <> 1 And subs <> 1 Then
+        If subs <> 1 And dividir <> 1 And add <> 1 Then
             If vezes = 1 Then
-                Label_hist.Text = num & " * "
-                Label_sinal.Text = "*"
+                Label_hist.Text = num & " x "
+                Label_sinal.Text = "x"
                 Label_res.Text = 0
             ElseIf vezes > 1 Then
-                Label_hist.Text = Val(Label_hist.Text) * num & " * "
-                Label_sinal.Text = "*"
+                Label_hist.Text = Val(Label_hist.Text) + num & "x"
+                Label_sinal.Text = "x"
                 Label_res.Text = 0
             End If
-        ElseIf add >= 1 Then
-            Label_hist.Text = Val(Label_hist.Text) + num & "* "
-            Label_sinal.Text = "*"
-            Label_res.Text = 0
-            add = 0
-        ElseIf dividir >= 1 Then
-            Label_hist.Text = Val(Label_hist.Text) / num & " * "
-            Label_sinal.Text = "*"
-            Label_res.Text = 0
-            dividir = 0
         ElseIf subs >= 1 Then
-            Label_hist.Text = Val(Label_hist.Text) - num & " * "
-            Label_sinal.Text = "*"
+            Label_hist.Text = Val(Label_hist.Text) - num & "x"
+            Label_sinal.Text = "x"
             Label_res.Text = 0
             subs = 0
+        ElseIf dividir >= 1 Then
+            Label_hist.Text = Val(Label_hist.Text) / num & " x "
+            Label_sinal.Text = "x"
+            Label_res.Text = 0
+            dividir = 0
+        ElseIf add >= 1 Then
+            Label_hist.Text = Val(Label_hist.Text) * num & "x"
+            Label_sinal.Text = "x"
+            Label_res.Text = 0
+            add = 0
         End If
 
         If Label_res.Text Mod 1 = 0 Then
@@ -169,17 +169,17 @@ Public Class Form1
                 Label_res.Text = 0
             End If
         ElseIf add >= 1 Then
-            Label_hist.Text = Val(Label_hist.Text) + num & "+"
+            Label_hist.Text = Val(Label_hist.Text) + num & "-"
             Label_sinal.Text = "-"
             Label_res.Text = 0
             add = 0
         ElseIf dividir >= 1 Then
-            Label_hist.Text = Val(Label_hist.Text) / num & " / "
+            Label_hist.Text = Val(Label_hist.Text) / num & " - "
             Label_sinal.Text = "-"
             Label_res.Text = 0
             dividir = 0
         ElseIf vezes >= 1 Then
-            Label_hist.Text = Val(Label_hist.Text) * num & " * "
+            Label_hist.Text = Val(Label_hist.Text) * num & " - "
             Label_sinal.Text = "-"
             Label_res.Text = 0
             vezes = 0
@@ -247,19 +247,23 @@ Public Class Form1
         num = Label_res.Text
         Label_sinal.Text = ""
         If add >= 1 Then
+            Label_hist.Text = Val(Label_hist.Text) & "+" & +num & "="
             Label_res.Text = Val(Label_hist.Text) + num
             add = 0
         ElseIf subs >= 1 Then
+            Label_hist.Text = Val(Label_hist.Text) & "-" & -num & "="
             Label_res.Text = Val(Label_hist.Text) - num
             subs = 0
         ElseIf dividir >= 1 Then
             If num <> 0 Then
-                Label_res.Text = Val(Label_hist.Text) / num
+                Label_hist.Text = Val(Label_hist.Text) / num & "="
+                Label_res.Text = Val(Label_hist.Text)
                 dividir = 0
             Else
                 MsgBox("Nenhum numero pode ser divisivel por 0")
             End If
         ElseIf vezes >= 1 Then
+            Label_hist.Text = Val(Label_hist.Text) & "X" & -num & "="
             Label_res.Text = Val(Label_hist.Text) * num
             vezes = 0
         ElseIf add = 0 And subs = 0 And dividir = 0 And vezes = 0 Then
@@ -383,17 +387,17 @@ Public Class Form1
                 Label_res.Text = 0
             End If
         ElseIf subs >= 1 Then
-            Label_hist.Text = Val(Label_hist.Text) - num & "- "
+            Label_hist.Text = Val(Label_hist.Text) - num & "+"
             Label_sinal.Text = "+"
             Label_res.Text = 0
             subs = 0
         ElseIf dividir >= 1 Then
-            Label_hist.Text = Val(Label_hist.Text) / num & " / "
+            Label_hist.Text = Val(Label_hist.Text) / num & " + "
             Label_sinal.Text = "+"
             Label_res.Text = 0
             dividir = 0
         ElseIf vezes >= 1 Then
-            Label_hist.Text = Val(Label_hist.Text) * num & " * "
+            Label_hist.Text = Val(Label_hist.Text) * num & " + "
             Label_sinal.Text = "+"
             Label_res.Text = 0
             vezes = 0
