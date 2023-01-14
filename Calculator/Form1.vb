@@ -321,20 +321,7 @@ Public Class Form1
 
             .Region = New Region(RoundedRectangle(.ClientRectangle, 50))
         End With
-        With borderForm
-            .ShowInTaskbar = False
-            .FormBorderStyle = Windows.Forms.FormBorderStyle.None
-            .StartPosition = FormStartPosition.Manual
-            .BackColor = Color.Black
-            .Opacity = 0.25
-            Dim r As Rectangle = Me.Bounds
-            r.Inflate(2, 2)
-            .Bounds = r
-            .Region = New Region(RoundedRectangle(.ClientRectangle, 50))
-            r = New Rectangle(3, 3, Me.Width - 4, Me.Height - 4)
-            .Region.Exclude(RoundedRectangle(r, 48))
-            .Show(Me)
-        End With
+
 
 
     End Sub
@@ -348,6 +335,18 @@ Public Class Form1
             Label_res.Text = 0
         End If
     End Sub
+
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+        Dim form As New Form
+
+    End Sub
+
+    Private Sub ConversõesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConversõesToolStripMenuItem.Click
+        Form2.Show()
+
+    End Sub
+
+
 
     Private Sub Roundbutton10_Click(sender As Object, e As EventArgs) Handles Roundbutton10.Click
         elevado = Label_res.Text

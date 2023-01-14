@@ -63,3 +63,4 @@ C:\Users\Rafael\Desktop\calculator-master-main\Calculator\obj\Debug\Calculator.v
 C:\Users\Rafael\Desktop\calculator-master-main\Calculator\obj\Debug\Calculator.exe
 C:\Users\Rafael\Desktop\calculator-master-main\Calculator\obj\Debug\Calculator.xml
 C:\Users\Rafael\Desktop\calculator-master-main\Calculator\obj\Debug\Calculator.pdb
+C:\Users\Rafael\Desktop\calculator-master-main\Calculator\obj\Debug\Calculator.Form2.resources
