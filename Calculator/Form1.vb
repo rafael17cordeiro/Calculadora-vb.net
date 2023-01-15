@@ -70,6 +70,7 @@ Public Class Form1
 
     Private Sub Roundbutton7_Click(sender As Object, e As EventArgs) Handles Roundbutton7.Click
         'escreve o valor na tela do utilizador
+
         If Val(Label_res.Text) = 0 And virgula = 0 Then
             Label_res.Text = 7
         Else
@@ -229,7 +230,7 @@ Public Class Form1
             Label_res.Text = 0
             add = 0
         ElseIf vezes >= 1 Then
-            Label_hist.Text = Val(Label_hist.Text) / num & " / "
+            Label_hist.Text = Val(Label_hist.Text) * num & " / "
             Label_sinal.Text = "/"
             Label_res.Text = 0
             vezes = 0
@@ -317,6 +318,7 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         With Me
 
             .Region = New Region(RoundedRectangle(.ClientRectangle, 50))
@@ -346,7 +348,114 @@ Public Class Form1
 
     End Sub
 
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
 
+
+        Roundbutton0.BackColor = Color.WhiteSmoke
+        Roundbutton1.BackColor = Color.WhiteSmoke
+        Roundbutton2.BackColor = Color.WhiteSmoke
+        Roundbutton3.BackColor = Color.WhiteSmoke
+        Roundbutton4.BackColor = Color.WhiteSmoke
+        Roundbutton5.BackColor = Color.WhiteSmoke
+        Roundbutton6.BackColor = Color.WhiteSmoke
+        Roundbutton7.BackColor = Color.WhiteSmoke
+        Roundbutton8.BackColor = Color.WhiteSmoke
+        Roundbutton9.BackColor = Color.WhiteSmoke
+        Roundbutton10.BackColor = Color.WhiteSmoke
+        Roundbutton11.BackColor = Color.WhiteSmoke
+
+
+        Roundbutton0.ForeColor = Color.Black
+        Roundbutton1.ForeColor = Color.Black
+        Roundbutton2.ForeColor = Color.Black
+        Roundbutton3.ForeColor = Color.Black
+        Roundbutton4.ForeColor = Color.Black
+        Roundbutton5.ForeColor = Color.Black
+        Roundbutton6.ForeColor = Color.Black
+        Roundbutton7.ForeColor = Color.Black
+        Roundbutton8.ForeColor = Color.Black
+        Roundbutton9.ForeColor = Color.Black
+        Roundbutton10.ForeColor = Color.Black
+        Roundbutton11.ForeColor = Color.Black
+
+
+        Roundbutton_ac.BackColor = Color.Silver
+        Roundbutton_div.BackColor = Color.Silver
+        Roundbutton_mod.BackColor = Color.Silver
+
+
+        Me.BackColor = Color.White
+        Label_res.ForeColor = Color.Black
+        MenuStrip1.BackColor = Color.White
+        MenuStrip1.ForeColor = Color.Black
+        Label_hist.ForeColor = Color.Black
+        Label_hist.BackColor = Color.White
+        Roundbutton_dividir.ForeColor = Color.Black
+        Roundbutton_x.ForeColor = Color.Black
+        Roundbutton_menos.ForeColor = Color.Black
+        Roundbutton_add.ForeColor = Color.Black
+        Roundbutton_igual.ForeColor = Color.Black
+        ConversõesToolStripMenuItem.BackColor = Color.White
+        ConversõesToolStripMenuItem.ForeColor = Color.Black
+        Label1.Visible = False
+        Label2.Visible = True
+        PictureBox4.Visible = True
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        Me.Close()
+    End Sub
+
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+        Me.BackColor = Color.Black
+        Roundbutton0.BackColor = Color.DimGray
+        Roundbutton1.BackColor = Color.DimGray
+        Roundbutton2.BackColor = Color.DimGray
+        Roundbutton3.BackColor = Color.DimGray
+        Roundbutton4.BackColor = Color.DimGray
+        Roundbutton5.BackColor = Color.DimGray
+        Roundbutton6.BackColor = Color.DimGray
+        Roundbutton7.BackColor = Color.DimGray
+        Roundbutton8.BackColor = Color.DimGray
+        Roundbutton9.BackColor = Color.DimGray
+        Roundbutton10.BackColor = Color.DimGray
+        Roundbutton11.BackColor = Color.DimGray
+
+
+        Roundbutton0.ForeColor = Color.White
+        Roundbutton1.ForeColor = Color.White
+        Roundbutton2.ForeColor = Color.White
+        Roundbutton3.ForeColor = Color.White
+        Roundbutton4.ForeColor = Color.White
+        Roundbutton5.ForeColor = Color.White
+        Roundbutton6.ForeColor = Color.White
+        Roundbutton7.ForeColor = Color.White
+        Roundbutton8.ForeColor = Color.White
+        Roundbutton9.ForeColor = Color.White
+        Roundbutton10.ForeColor = Color.White
+        Roundbutton11.ForeColor = Color.White
+
+        Label_res.ForeColor = Color.White
+        MenuStrip1.BackColor = Color.Black
+        MenuStrip1.ForeColor = Color.White
+        Label_hist.ForeColor = Color.White
+        Label_hist.BackColor = Color.Black
+        Roundbutton_dividir.ForeColor = Color.White
+        Roundbutton_x.ForeColor = Color.White
+        Roundbutton_menos.ForeColor = Color.White
+        Roundbutton_add.ForeColor = Color.White
+        Roundbutton_igual.ForeColor = Color.White
+        ConversõesToolStripMenuItem.BackColor = Color.Black
+        ConversõesToolStripMenuItem.ForeColor = Color.White
+        Label1.Visible = True
+        Label2.Visible = False
+        PictureBox4.Visible = False
+    End Sub
+
+    Private Sub Roundbutton12_Click(sender As Object, e As EventArgs)
+        Me.Close()
+    End Sub
 
     Private Sub Roundbutton10_Click(sender As Object, e As EventArgs) Handles Roundbutton10.Click
         elevado = Label_res.Text
@@ -367,7 +476,7 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub Roundbutton13_Click(sender As Object, e As EventArgs) Handles Roundbutton13.Click
+    Private Sub Roundbutton13_Click(sender As Object, e As EventArgs) Handles Roundbutton_add.Click
         'estas variaveis funcionam como um bollean ou seja qunado o utilizador clica no botao 
         'o conter add adiciona 1 ou seja se o if (vezes =1) faz a multiplicação, se os conters da subtraçao,multipicaçao,
         'divisao etc.. forem = ou superiores a 1 signfica que tem de fazer o calculo primeiro por isso na label hist faz o

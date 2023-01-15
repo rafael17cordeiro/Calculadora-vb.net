@@ -2,7 +2,7 @@
 Public Class roundbutton
     Inherits Button
     Public Sub New()
-        Me.SetStyle(ControlStyles.UserPaint, True)
+        Me.SetStyle(ControlStyles.UserPaint, false)
     End Sub
 
     Protected Overrides Sub onpaint(pevent As PaintEventArgs)

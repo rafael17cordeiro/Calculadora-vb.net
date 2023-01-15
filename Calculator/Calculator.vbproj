@@ -143,5 +143,65 @@
   <ItemGroup>
     <None Include="Resources\3602247.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ruler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gigabyte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a-medida.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kilo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kilo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hourglass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\on-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brightness-and-contrast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggle-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backspace-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backspace-arrow %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backspace-arrow %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brightness-and-contrast1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
