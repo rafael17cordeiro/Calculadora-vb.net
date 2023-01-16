@@ -474,7 +474,7 @@ Partial Class Form2
         'ComboBox8
         '
         Me.ComboBox8.FormattingEnabled = True
-        Me.ComboBox8.Items.AddRange(New Object() {"Byte (B)", "Kilobyte (KB)", "Megabyte (MB)", "Gigabyte (GB)", "Terabyte (TB)"})
+        Me.ComboBox8.Items.AddRange(New Object() {"Segundos (s)", "Minutos (min)", "Horas (h)", "Dias "})
         Me.ComboBox8.Location = New System.Drawing.Point(425, 403)
         Me.ComboBox8.Name = "ComboBox8"
         Me.ComboBox8.Size = New System.Drawing.Size(115, 21)

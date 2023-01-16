@@ -338,19 +338,18 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs)
         Dim form As New Form
 
     End Sub
 
-    Private Sub ConversõesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConversõesToolStripMenuItem.Click
-        Form2.Show()
 
-    End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
 
-
+        Me.BackColor = Color.White
+        Label_conver.BackColor = Color.White
+        Label_conver.ForeColor = Color.Black
         Roundbutton0.BackColor = Color.WhiteSmoke
         Roundbutton1.BackColor = Color.WhiteSmoke
         Roundbutton2.BackColor = Color.WhiteSmoke
@@ -384,10 +383,9 @@ Public Class Form1
         Roundbutton_mod.BackColor = Color.Silver
 
 
-        Me.BackColor = Color.White
+
         Label_res.ForeColor = Color.Black
-        MenuStrip1.BackColor = Color.White
-        MenuStrip1.ForeColor = Color.Black
+
         Label_hist.ForeColor = Color.Black
         Label_hist.BackColor = Color.White
         Roundbutton_dividir.ForeColor = Color.Black
@@ -395,8 +393,8 @@ Public Class Form1
         Roundbutton_menos.ForeColor = Color.Black
         Roundbutton_add.ForeColor = Color.Black
         Roundbutton_igual.ForeColor = Color.Black
-        ConversõesToolStripMenuItem.BackColor = Color.White
-        ConversõesToolStripMenuItem.ForeColor = Color.Black
+
+
         Label1.Visible = False
         Label2.Visible = True
         PictureBox4.Visible = True
@@ -409,6 +407,8 @@ Public Class Form1
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
         Me.BackColor = Color.Black
+        Label_conver.BackColor = Color.Black
+        Label_conver.ForeColor = Color.White
         Roundbutton0.BackColor = Color.DimGray
         Roundbutton1.BackColor = Color.DimGray
         Roundbutton2.BackColor = Color.DimGray
@@ -437,8 +437,7 @@ Public Class Form1
         Roundbutton11.ForeColor = Color.White
 
         Label_res.ForeColor = Color.White
-        MenuStrip1.BackColor = Color.Black
-        MenuStrip1.ForeColor = Color.White
+
         Label_hist.ForeColor = Color.White
         Label_hist.BackColor = Color.Black
         Roundbutton_dividir.ForeColor = Color.White
@@ -446,15 +445,28 @@ Public Class Form1
         Roundbutton_menos.ForeColor = Color.White
         Roundbutton_add.ForeColor = Color.White
         Roundbutton_igual.ForeColor = Color.White
-        ConversõesToolStripMenuItem.BackColor = Color.Black
-        ConversõesToolStripMenuItem.ForeColor = Color.White
+
         Label1.Visible = True
         Label2.Visible = False
         PictureBox4.Visible = False
     End Sub
 
-    Private Sub Roundbutton12_Click(sender As Object, e As EventArgs)
-        Me.Close()
+
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox_close.Click
+        PictureBox_close.Visible = False
+        PictureBox_menu.Visible = True
+        Label_conver.Visible = False
+    End Sub
+
+    Private Sub PictureBox_menu_Click(sender As Object, e As EventArgs) Handles PictureBox_menu.Click
+        PictureBox_close.Visible = True
+        PictureBox_menu.Visible = False
+        Label_conver.Visible = True
+    End Sub
+
+    Private Sub Label_conver_Click(sender As Object, e As EventArgs) Handles Label_conver.Click
+        Form2.Show()
     End Sub
 
     Private Sub Roundbutton10_Click(sender As Object, e As EventArgs) Handles Roundbutton10.Click

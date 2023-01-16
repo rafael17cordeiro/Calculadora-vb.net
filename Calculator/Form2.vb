@@ -206,6 +206,7 @@ Public Class Form2
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+
         Dim valor As Double
         If TextBox3.Text = "" Then
             MsgBox("Escreva a quantia que pretende converter")
@@ -379,5 +380,9 @@ Public Class Form2
         Label14.ForeColor = Color.White
         Label26.Visible = False
         PictureBox7.Visible = False
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+
     End Sub
 End Class

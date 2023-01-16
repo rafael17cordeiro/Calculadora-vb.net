@@ -47,13 +47,15 @@ Partial Class Form1
         Me.Roundbutton_mod = New Calculator.roundbutton()
         Me.Roundbutton_div = New Calculator.roundbutton()
         Me.Roundbutton_ac = New Calculator.roundbutton()
-        Me.ConversõesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.PictureBox_close = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_menu = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.MenuStrip1.SuspendLayout()
+        Me.Label_conver = New System.Windows.Forms.Label()
+        CType(Me.PictureBox_close, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_menu, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -88,9 +90,9 @@ Partial Class Form1
         Me.Label_hist.BackColor = System.Drawing.Color.Black
         Me.Label_hist.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label_hist.ForeColor = System.Drawing.Color.Silver
-        Me.Label_hist.Location = New System.Drawing.Point(34, 38)
+        Me.Label_hist.Location = New System.Drawing.Point(75, 38)
         Me.Label_hist.Name = "Label_hist"
-        Me.Label_hist.Size = New System.Drawing.Size(197, 39)
+        Me.Label_hist.Size = New System.Drawing.Size(156, 39)
         Me.Label_hist.TabIndex = 39
         Me.Label_hist.TextAlign = System.Drawing.ContentAlignment.BottomRight
         '
@@ -99,7 +101,7 @@ Partial Class Form1
         Me.Label1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(217, 5)
+        Me.Label1.Location = New System.Drawing.Point(228, 8)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(25, 24)
         Me.Label1.TabIndex = 44
@@ -110,7 +112,7 @@ Partial Class Form1
         Me.Label2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(217, 6)
+        Me.Label2.Location = New System.Drawing.Point(228, 9)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(25, 24)
         Me.Label2.TabIndex = 48
@@ -152,13 +154,14 @@ Partial Class Form1
         Me.Roundbutton11.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Roundbutton11.FlatAppearance.BorderSize = 0
         Me.Roundbutton11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Roundbutton11.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Roundbutton11.Font = New System.Drawing.Font("Arial", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Roundbutton11.ForeColor = System.Drawing.Color.White
         Me.Roundbutton11.Location = New System.Drawing.Point(75, 415)
         Me.Roundbutton11.Name = "Roundbutton11"
         Me.Roundbutton11.Size = New System.Drawing.Size(53, 53)
         Me.Roundbutton11.TabIndex = 35
         Me.Roundbutton11.Text = "."
+        Me.Roundbutton11.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.Roundbutton11.UseVisualStyleBackColor = False
         '
         'Roundbutton0
@@ -404,30 +407,33 @@ Partial Class Form1
         Me.Roundbutton_ac.Text = "AC"
         Me.Roundbutton_ac.UseVisualStyleBackColor = False
         '
-        'ConversõesToolStripMenuItem
+        'PictureBox_close
         '
-        Me.ConversõesToolStripMenuItem.BackColor = System.Drawing.Color.Black
-        Me.ConversõesToolStripMenuItem.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ConversõesToolStripMenuItem.ForeColor = System.Drawing.Color.White
-        Me.ConversõesToolStripMenuItem.Name = "ConversõesToolStripMenuItem"
-        Me.ConversõesToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
-        Me.ConversõesToolStripMenuItem.Text = "Conversões"
+        Me.PictureBox_close.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox_close.Image = Global.Calculator.My.Resources.Resources.close
+        Me.PictureBox_close.Location = New System.Drawing.Point(17, 16)
+        Me.PictureBox_close.Name = "PictureBox_close"
+        Me.PictureBox_close.Size = New System.Drawing.Size(25, 23)
+        Me.PictureBox_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox_close.TabIndex = 51
+        Me.PictureBox_close.TabStop = False
+        Me.PictureBox_close.Visible = False
         '
-        'MenuStrip1
+        'PictureBox_menu
         '
-        Me.MenuStrip1.BackColor = System.Drawing.Color.Black
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConversõesToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.MenuStrip1.Size = New System.Drawing.Size(265, 26)
-        Me.MenuStrip1.TabIndex = 45
-        Me.MenuStrip1.Text = "MenuStrip1"
+        Me.PictureBox_menu.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox_menu.Image = Global.Calculator.My.Resources.Resources.menu__1_
+        Me.PictureBox_menu.Location = New System.Drawing.Point(15, 9)
+        Me.PictureBox_menu.Name = "PictureBox_menu"
+        Me.PictureBox_menu.Size = New System.Drawing.Size(30, 36)
+        Me.PictureBox_menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox_menu.TabIndex = 50
+        Me.PictureBox_menu.TabStop = False
         '
         'PictureBox4
         '
         Me.PictureBox4.Image = Global.Calculator.My.Resources.Resources.toggle_button
-        Me.PictureBox4.Location = New System.Drawing.Point(144, 0)
+        Me.PictureBox4.Location = New System.Drawing.Point(158, 4)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(36, 35)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -438,7 +444,7 @@ Partial Class Form1
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.Calculator.My.Resources.Resources.brightness_and_contrast1
-        Me.PictureBox3.Location = New System.Drawing.Point(182, 4)
+        Me.PictureBox3.Location = New System.Drawing.Point(196, 9)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(26, 26)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -448,7 +454,7 @@ Partial Class Form1
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.Calculator.My.Resources.Resources.on_button
-        Me.PictureBox2.Location = New System.Drawing.Point(147, 3)
+        Me.PictureBox2.Location = New System.Drawing.Point(161, 7)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(33, 29)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -465,18 +471,32 @@ Partial Class Form1
         Me.PictureBox1.TabIndex = 42
         Me.PictureBox1.TabStop = False
         '
+        'Label_conver
+        '
+        Me.Label_conver.AutoSize = True
+        Me.Label_conver.BackColor = System.Drawing.Color.Black
+        Me.Label_conver.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label_conver.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_conver.ForeColor = System.Drawing.Color.White
+        Me.Label_conver.Location = New System.Drawing.Point(13, 48)
+        Me.Label_conver.Name = "Label_conver"
+        Me.Label_conver.Size = New System.Drawing.Size(99, 18)
+        Me.Label_conver.TabIndex = 52
+        Me.Label_conver.Text = " Conversões"
+        Me.Label_conver.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(265, 481)
+        Me.Controls.Add(Me.Label_conver)
+        Me.Controls.Add(Me.PictureBox_menu)
         Me.Controls.Add(Me.PictureBox4)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Roundbutton10)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label_sinal)
@@ -501,13 +521,14 @@ Partial Class Form1
         Me.Controls.Add(Me.Roundbutton_ac)
         Me.Controls.Add(Me.Label_res)
         Me.Controls.Add(Me.Label_hist)
+        Me.Controls.Add(Me.PictureBox_close)
+        Me.Controls.Add(Me.Label2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Calculator"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        CType(Me.PictureBox_close, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_menu, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -545,6 +566,7 @@ Partial Class Form1
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents ConversõesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents PictureBox_menu As PictureBox
+    Friend WithEvents PictureBox_close As PictureBox
+    Friend WithEvents Label_conver As Label
 End Class

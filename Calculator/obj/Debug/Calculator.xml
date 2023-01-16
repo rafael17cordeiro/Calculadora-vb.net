@@ -87,6 +87,11 @@ Calculator
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Calculator.My.Resources.Resources.close">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Calculator.My.Resources.Resources.delete">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -113,6 +118,16 @@ Calculator
 </summary>
 </member>
 <member name="P:Calculator.My.Resources.Resources.kilo__1_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Calculator.My.Resources.Resources.menu">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Calculator.My.Resources.Resources.menu__1_">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
