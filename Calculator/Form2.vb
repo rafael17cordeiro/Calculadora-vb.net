@@ -54,18 +54,18 @@ Public Class Form2
         Form1.Show()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button_moeda.Click
         Dim valor As Double
         Dim exchangeRate_libra As Double = 0.89 'libra
         Dim exchangeRate_dollar As Double = 1.08 'dollar
         Dim exchangeRate_eur As Double = 1.16 '
 
-        If TextBox1.Text = "" Then
+        If TextBox_valor_moeda.Text = "" Then
             MsgBox("Escreva a quantia que pretende converter")
         End If
-        valor = TextBox1.Text
-        If ComboBox1.SelectedIndex = 0 Then
-            Select Case ComboBox2.SelectedIndex
+        valor = TextBox_valor_moeda.Text
+        If ComboBox_moeda1.SelectedIndex = 0 Then
+            Select Case ComboBox_moeda2.SelectedIndex
                 Case 0
                     Label11.Text = valor & " Euros"
                 Case 1
@@ -80,8 +80,8 @@ Public Class Form2
 
 
         '------------------fim secçao euros----------
-        If ComboBox1.SelectedIndex = 1 Then
-            Select Case ComboBox2.SelectedIndex
+        If ComboBox_moeda1.SelectedIndex = 1 Then
+            Select Case ComboBox_moeda2.SelectedIndex
                 Case 0
                     Label11.Text = valor * exchangeRate_eur & " Euros"
                 Case 1
@@ -92,8 +92,8 @@ Public Class Form2
         End If
 
         '----------------------Fim secçao libra --------------------------
-        If ComboBox1.SelectedIndex = 2 Then
-            Select Case ComboBox2.SelectedIndex
+        If ComboBox_moeda1.SelectedIndex = 2 Then
+            Select Case ComboBox_moeda2.SelectedIndex
                 Case 0
                     Label11.Text = valor * exchangeRate_eur & "Euros"
                 Case 1
@@ -105,27 +105,27 @@ Public Class Form2
         '--------------------fim secçao dolar---------------------------------
     End Sub
 
-    Private Sub TextBox1_TextClick(sender As Object, e As EventArgs) Handles TextBox1.Click
-        TextBox1.Text = ""
+    Private Sub TextBox1_TextClick(sender As Object, e As EventArgs) Handles TextBox_valor_moeda.Click
+        TextBox_valor_moeda.Text = ""
     End Sub
 
-    Private Sub TextBox2_TextClick(sender As Object, e As EventArgs) Handles TextBox2.Click
-        TextBox2.Text = ""
+    Private Sub TextBox2_TextClick(sender As Object, e As EventArgs) Handles TextBox_valor_comprimento.Click
+        TextBox_valor_comprimento.Text = ""
     End Sub
-    Private Sub TextBox3_TextClick(sender As Object, e As EventArgs) Handles TextBox3.Click
-        TextBox3.Text = ""
+    Private Sub TextBox3_TextClick(sender As Object, e As EventArgs) Handles TextBox_valor_bytes.Click
+        TextBox_valor_bytes.Text = ""
     End Sub
 
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button_comprimento.Click
         Dim valor As Double
-        If TextBox2.Text = "" Then
+        If TextBox_valor_comprimento.Text = "" Then
             MsgBox("Escreva a quantia que pretende converter")
         End If
-        valor = TextBox2.Text
+        valor = TextBox_valor_comprimento.Text
 
-        If ComboBox4.SelectedIndex = 0 Then
-            Select Case ComboBox3.SelectedIndex
+        If ComboBox_comprimento1.SelectedIndex = 0 Then
+            Select Case ComboBox_comprimento2.SelectedIndex
                 Case 0
                     Label12.Text = valor & "milimetros"
                 Case 1
@@ -141,8 +141,8 @@ Public Class Form2
 
         '------------------------------Fim seleção milimetros---------------------------
 
-        If ComboBox4.SelectedIndex = 1 Then
-            Select Case ComboBox3.SelectedIndex
+        If ComboBox_comprimento1.SelectedIndex = 1 Then
+            Select Case ComboBox_comprimento2.SelectedIndex
                 Case 0
                     Label12.Text = valor * 10 & "milimetros"
                 Case 1
@@ -158,8 +158,8 @@ Public Class Form2
 
 
         '------------------------fim secçao centimetros--------------------------
-        If ComboBox4.SelectedIndex = 2 Then
-            Select Case ComboBox3.SelectedIndex
+        If ComboBox_comprimento1.SelectedIndex = 2 Then
+            Select Case ComboBox_comprimento2.SelectedIndex
                 Case 0
                     Label12.Text = valor * 100 & "milimetros"
                 Case 1
@@ -173,8 +173,8 @@ Public Class Form2
             End Select
         End If
         '----------------------------fim secçao decimetros-------------------------
-        If ComboBox4.SelectedIndex = 3 Then
-            Select Case ComboBox3.SelectedIndex
+        If ComboBox_comprimento1.SelectedIndex = 3 Then
+            Select Case ComboBox_comprimento2.SelectedIndex
                 Case 0
                     Label12.Text = valor * 1000 & "milimetros"
                 Case 1
@@ -188,8 +188,8 @@ Public Class Form2
             End Select
         End If
         '----------------------------fim secçao metros-------------------------
-        If ComboBox4.SelectedIndex = 4 Then
-            Select Case ComboBox3.SelectedIndex
+        If ComboBox_comprimento1.SelectedIndex = 4 Then
+            Select Case ComboBox_comprimento2.SelectedIndex
                 Case 0
                     Label12.Text = valor * 1000000 & " Milimetros"
                 Case 1
@@ -205,15 +205,15 @@ Public Class Form2
         '----------------------------fim secçao kilometros-------------------------
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button_bytes.Click
 
         Dim valor As Double
-        If TextBox3.Text = "" Then
+        If TextBox_valor_bytes.Text = "" Then
             MsgBox("Escreva a quantia que pretende converter")
         End If
-        valor = TextBox3.Text
-        If ComboBox6.SelectedIndex = 0 Then
-            Select Case ComboBox5.SelectedIndex
+        valor = TextBox_valor_bytes.Text
+        If ComboBox_bytes1.SelectedIndex = 0 Then
+            Select Case ComboBox_bytes2.SelectedIndex
                 Case 0
                     Label13.Text = valor & " Bytes"
                 Case 1
@@ -230,8 +230,8 @@ Public Class Form2
 
 
         '---------------------------Fim secçao bytes------------------------
-        If ComboBox6.SelectedIndex = 1 Then
-            Select Case ComboBox5.SelectedIndex
+        If ComboBox_bytes1.SelectedIndex = 1 Then
+            Select Case ComboBox_bytes2.SelectedIndex
                 Case 0
                     Label13.Text = valor * 1024 & " Bytes"
                 Case 1
@@ -248,8 +248,8 @@ Public Class Form2
 
 
         '--------------------------Fim secçao kilkobytes ------------------
-        If ComboBox6.SelectedIndex = 2 Then
-            Select Case ComboBox5.SelectedIndex
+        If ComboBox_bytes1.SelectedIndex = 2 Then
+            Select Case ComboBox_bytes2.SelectedIndex
                 Case 0
                     Label13.Text = valor * (1024 * 1024) & " Bytes"
                 Case 1
@@ -265,8 +265,8 @@ Public Class Form2
 
 
         '-----------------------Fim secção Mega bytes ------------------
-        If ComboBox6.SelectedIndex = 2 Then
-            Select Case ComboBox5.SelectedIndex
+        If ComboBox_bytes1.SelectedIndex = 2 Then
+            Select Case ComboBox_bytes2.SelectedIndex
                 Case 0
                     Label13.Text = valor * (1024 * 1024 * 1024) & " Bytes"
                 Case 1
@@ -282,8 +282,8 @@ Public Class Form2
 
 
         '-----------------------Fim secção gigabyes ----------------------
-        If ComboBox6.SelectedIndex = 2 Then
-            Select Case ComboBox5.SelectedIndex
+        If ComboBox_bytes1.SelectedIndex = 2 Then
+            Select Case ComboBox_bytes2.SelectedIndex
                 Case 0
                     Label13.Text = valor * 1000000000000 & " Bytes"
                 Case 1
@@ -298,65 +298,22 @@ Public Class Form2
         End If
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-
-        Select Case ComboBox1.SelectedItem
-            Case "Miligrama (mg)"
-                Select Case ComboBox2.SelectedItem
-                    Case "Grama (g)"
-                        Label15.Text = (TextBox5.Text * 0.001).ToString()
-                    Case "Quiliograma (kg)"
-                        Label15.Text = (TextBox5.Text * 0.000001).ToString()
-                    Case "Tonelada (T)"
-                        Label15.Text = (TextBox5.Text * 0.000000001).ToString()
-                End Select
-            Case "Grama (g)"
-                Select Case ComboBox2.SelectedItem
-                    Case "Miligrama (mg)"
-                        Label15.Text = (TextBox5.Text * 1000).ToString()
-                    Case "Quiliograma (kg)"
-                        Label15.Text = (TextBox5.Text * 0.001).ToString()
-                    Case "Tonelada (T)"
-                        Label15.Text = (TextBox5.Text * 0.000001).ToString()
-                End Select
-            Case "Quiliograma (kg)"
-                Select Case ComboBox2.SelectedItem
-                    Case "Miligrama (mg)"
-                        Label15.Text = (TextBox5.Text * 1000000).ToString()
-                    Case "Grama (g)"
-                        Label15.Text = (TextBox5.Text * 1000).ToString()
-                    Case "Tonelada (T)"
-                        Label15.Text = (TextBox5.Text * 0.001).ToString()
-                End Select
-            Case "Tonelada (T)"
-                Select Case ComboBox2.SelectedItem
-                    Case "Miligrama (mg)"
-                        Label15.Text = (TextBox5.Text * 1000000000).ToString()
-                    Case "Grama (g)"
-                        Label15.Text = (TextBox5.Text * 1000000).ToString()
-                    Case "Quiliograma (kg)"
-                        Label15.Text = (TextBox5.Text * 1000).ToString()
-                End Select
-        End Select
-    End Sub
 
 
-    Private Sub PictureBox9_Click(sender As Object, e As EventArgs) Handles PictureBox9.Click
+
+    Private Sub PictureBox9_Click(sender As Object, e As EventArgs) Handles PictureBox_enabled.Click
         Me.BackColor = Color.White
         Label3.ForeColor = Color.Black
         Label6.ForeColor = Color.Black
         Label9.ForeColor = Color.Black
-        Label24.ForeColor = Color.Black
-        Label21.ForeColor = Color.Black
-        Label18.ForeColor = Color.Black
+
+
         Label11.ForeColor = Color.Black
         Label12.ForeColor = Color.Black
         Label13.ForeColor = Color.Black
-        Label16.ForeColor = Color.Black
-        Label15.ForeColor = Color.Black
-        Label14.ForeColor = Color.Black
+
         Label26.Visible = True
-        PictureBox7.Visible = True
+        PictureBox_disabled.Visible = True
     End Sub
 
     Private Sub Label26_Click(sender As Object, e As EventArgs) Handles Label26.Click
@@ -364,25 +321,20 @@ Public Class Form2
         Form1.Show()
     End Sub
 
-    Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
+    Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox_disabled.Click
         Me.BackColor = Color.Black
         Label3.ForeColor = Color.White
         Label6.ForeColor = Color.White
         Label9.ForeColor = Color.White
-        Label24.ForeColor = Color.White
-        Label21.ForeColor = Color.White
-        Label18.ForeColor = Color.White
         Label11.ForeColor = Color.White
         Label12.ForeColor = Color.White
         Label13.ForeColor = Color.White
-        Label16.ForeColor = Color.White
-        Label15.ForeColor = Color.White
-        Label14.ForeColor = Color.White
+
         Label26.Visible = False
-        PictureBox7.Visible = False
+        PictureBox_disabled.Visible = False
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class

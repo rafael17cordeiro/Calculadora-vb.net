@@ -252,7 +252,7 @@ Public Class Form1
             Label_res.Text = Val(Label_hist.Text) + num
             add = 0
         ElseIf subs >= 1 Then
-            Label_hist.Text = Val(Label_hist.Text) & "-" & -num & "="
+            Label_hist.Text = Val(Label_hist.Text) & "" & -num & "="
             Label_res.Text = Val(Label_hist.Text) - num
             subs = 0
         ElseIf dividir >= 1 Then
@@ -264,8 +264,9 @@ Public Class Form1
                 MsgBox("Nenhum numero pode ser divisivel por 0")
             End If
         ElseIf vezes >= 1 Then
-            Label_hist.Text = Val(Label_hist.Text) & "X" & -num & "="
+            Label_hist.Text = Val(Label_hist.Text) & "X" & num & "="
             Label_res.Text = Val(Label_hist.Text) * num
+
             vezes = 0
         ElseIf add = 0 And subs = 0 And dividir = 0 And vezes = 0 Then
             Label_res.Text = num
@@ -280,7 +281,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Roundbutton_ac_Click(sender As Object, e As EventArgs) Handles Roundbutton_ac.Click
+    Private Sub Roundbutton_ac_Click(sender As Object, e As EventArgs)
         ' apagam tudo deixando so o 0 para o utilizador saber onde vai ser exibido o valor
         add = 0
         subs = 0
@@ -297,7 +298,7 @@ Public Class Form1
     End Sub
 
     Private borderForm As New Form
-
+    ' estas function server para arredondar os cantos do formulario
     Private Function RoundedRectangle(rect As RectangleF, diam As Single) As Drawing2D.GraphicsPath
         Dim path As New Drawing2D.GraphicsPath
         path.AddArc(rect.Left, rect.Top, diam, diam, 180, 90)
@@ -328,7 +329,8 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label_close_white.Click
+        'fechar o programa
         Me.Close()
     End Sub
 
@@ -345,11 +347,13 @@ Public Class Form1
 
 
 
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox_enabled.Click
 
         Me.BackColor = Color.White
         Label_conver.BackColor = Color.White
         Label_conver.ForeColor = Color.Black
+        Label_limparaac.BackColor = Color.White
+        Label_limparaac.ForeColor = Color.Black
         Roundbutton0.BackColor = Color.WhiteSmoke
         Roundbutton1.BackColor = Color.WhiteSmoke
         Roundbutton2.BackColor = Color.WhiteSmoke
@@ -362,6 +366,7 @@ Public Class Form1
         Roundbutton9.BackColor = Color.WhiteSmoke
         Roundbutton10.BackColor = Color.WhiteSmoke
         Roundbutton11.BackColor = Color.WhiteSmoke
+
 
 
         Roundbutton0.ForeColor = Color.Black
@@ -378,7 +383,7 @@ Public Class Form1
         Roundbutton11.ForeColor = Color.Black
 
 
-        Roundbutton_ac.BackColor = Color.Silver
+
         Roundbutton_div.BackColor = Color.Silver
         Roundbutton_mod.BackColor = Color.Silver
 
@@ -395,20 +400,22 @@ Public Class Form1
         Roundbutton_igual.ForeColor = Color.Black
 
 
-        Label1.Visible = False
-        Label2.Visible = True
-        PictureBox4.Visible = True
+        Label_close_white.Visible = False
+        Label_close_black.Visible = True
+        PictureBox_disabled.Visible = True
 
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label_close_black.Click
         Me.Close()
     End Sub
 
-    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox_disabled.Click
         Me.BackColor = Color.Black
         Label_conver.BackColor = Color.Black
         Label_conver.ForeColor = Color.White
+        Label_limparaac.BackColor = Color.Black
+        Label_limparaac.ForeColor = Color.White
         Roundbutton0.BackColor = Color.DimGray
         Roundbutton1.BackColor = Color.DimGray
         Roundbutton2.BackColor = Color.DimGray
@@ -446,9 +453,9 @@ Public Class Form1
         Roundbutton_add.ForeColor = Color.White
         Roundbutton_igual.ForeColor = Color.White
 
-        Label1.Visible = True
-        Label2.Visible = False
-        PictureBox4.Visible = False
+        Label_close_white.Visible = True
+        Label_close_black.Visible = False
+        PictureBox_disabled.Visible = False
     End Sub
 
 
@@ -457,16 +464,36 @@ Public Class Form1
         PictureBox_close.Visible = False
         PictureBox_menu.Visible = True
         Label_conver.Visible = False
+
     End Sub
 
     Private Sub PictureBox_menu_Click(sender As Object, e As EventArgs) Handles PictureBox_menu.Click
         PictureBox_close.Visible = True
         PictureBox_menu.Visible = False
         Label_conver.Visible = True
+
     End Sub
 
     Private Sub Label_conver_Click(sender As Object, e As EventArgs) Handles Label_conver.Click
         Form2.Show()
+    End Sub
+
+    Private Sub Roundbutton12_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Roundbutton12_Click_1(sender As Object, e As EventArgs) Handles Roundbutton12.Click
+        Label_res.Text = 1 / Label_res.Text
+    End Sub
+
+    Private Sub Label_limparaac_Click(sender As Object, e As EventArgs) Handles Label_limparaac.Click
+        add = 0
+        subs = 0
+        igual = 0
+        virgula = 0
+        Label_res.Text = 0
+        Label_hist.Text = ""
+        Label_sinal.Text = ""
     End Sub
 
     Private Sub Roundbutton10_Click(sender As Object, e As EventArgs) Handles Roundbutton10.Click
@@ -555,7 +582,7 @@ Public Class Form1
         Me.Size = New Size(Me.Size.Width - 250, Me.Size.Height + 0)
     End Sub
 
-    Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs) Handles PictureBox_limpar.Click
         ' esta funcao server para pagar caracter a caracter utilizando o lenght da label
         If Label_res.Text = " " Then
             Label_res.Text = "0"
