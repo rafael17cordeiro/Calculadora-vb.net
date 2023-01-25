@@ -122,7 +122,7 @@ Public Class Form1
                 Label_sinal.Text = "x"
                 Label_res.Text = 0
             ElseIf vezes > 1 Then
-                Label_hist.Text = Val(Label_hist.Text) + num & "x"
+                Label_hist.Text = Val(Label_hist.Text) * num & "x"
                 Label_sinal.Text = "x"
                 Label_res.Text = 0
             End If
@@ -137,7 +137,7 @@ Public Class Form1
             Label_res.Text = 0
             dividir = 0
         ElseIf add >= 1 Then
-            Label_hist.Text = Val(Label_hist.Text) * num & "x"
+            Label_hist.Text = Val(Label_hist.Text) + num & "x"
             Label_sinal.Text = "x"
             Label_res.Text = 0
             add = 0
@@ -215,7 +215,7 @@ Public Class Form1
                 Label_sinal.Text = "/"
                 Label_res.Text = 0
             ElseIf dividir > 1 Then
-                Label_hist.Text = Val(Label_hist.Text) + num & " / "
+                Label_hist.Text = Val(Label_hist.Text) / num & " / "
                 Label_sinal.Text = "/"
                 Label_res.Text = 0
             End If
