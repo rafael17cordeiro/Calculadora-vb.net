@@ -165,7 +165,7 @@ Public Class Form1
                 Label_sinal.Text = "-"
                 Label_res.Text = 0
             ElseIf subs > 1 Then
-                Label_hist.Text = Val(Label_hist.Text) - num & "-"
+                Label_hist.Text = Val(Label_hist.Text) - num & "-   "
                 Label_sinal.Text = "-"
                 Label_res.Text = 0
             End If
