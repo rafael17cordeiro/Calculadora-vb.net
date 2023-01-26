@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Label_res = New System.Windows.Forms.Label()
         Me.Label_sinal = New System.Windows.Forms.Label()
         Me.Label_hist = New System.Windows.Forms.Label()
@@ -34,6 +35,8 @@ Partial Class Form1
         Me.PictureBox_enabled = New System.Windows.Forms.PictureBox()
         Me.PictureBox_limpar = New System.Windows.Forms.PictureBox()
         Me.Label_conver = New System.Windows.Forms.Label()
+        Me.Label_limparaac = New System.Windows.Forms.Label()
+        Me.Roundbutton12 = New Calculator.roundbutton()
         Me.Roundbutton10 = New Calculator.roundbutton()
         Me.Roundbutton_igual = New Calculator.roundbutton()
         Me.Roundbutton11 = New Calculator.roundbutton()
@@ -53,8 +56,6 @@ Partial Class Form1
         Me.Roundbutton_dividir = New Calculator.roundbutton()
         Me.Roundbutton_mod = New Calculator.roundbutton()
         Me.Roundbutton_div = New Calculator.roundbutton()
-        Me.Roundbutton12 = New Calculator.roundbutton()
-        Me.Label_limparaac = New System.Windows.Forms.Label()
         CType(Me.PictureBox_close, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox_menu, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox_disabled, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -202,6 +203,33 @@ Partial Class Form1
         Me.Label_conver.TabIndex = 52
         Me.Label_conver.Text = " Conversões"
         Me.Label_conver.Visible = False
+        '
+        'Label_limparaac
+        '
+        Me.Label_limparaac.AutoSize = True
+        Me.Label_limparaac.BackColor = System.Drawing.Color.Black
+        Me.Label_limparaac.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label_limparaac.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_limparaac.ForeColor = System.Drawing.Color.White
+        Me.Label_limparaac.Location = New System.Drawing.Point(212, 77)
+        Me.Label_limparaac.Name = "Label_limparaac"
+        Me.Label_limparaac.Size = New System.Drawing.Size(40, 24)
+        Me.Label_limparaac.TabIndex = 54
+        Me.Label_limparaac.Text = "AC"
+        '
+        'Roundbutton12
+        '
+        Me.Roundbutton12.BackColor = System.Drawing.Color.LightGray
+        Me.Roundbutton12.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Roundbutton12.FlatAppearance.BorderSize = 0
+        Me.Roundbutton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Roundbutton12.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Roundbutton12.Location = New System.Drawing.Point(14, 182)
+        Me.Roundbutton12.Name = "Roundbutton12"
+        Me.Roundbutton12.Size = New System.Drawing.Size(53, 53)
+        Me.Roundbutton12.TabIndex = 53
+        Me.Roundbutton12.Text = "1/x"
+        Me.Roundbutton12.UseVisualStyleBackColor = False
         '
         'Roundbutton10
         '
@@ -498,33 +526,6 @@ Partial Class Form1
         Me.Roundbutton_div.Text = "+/-"
         Me.Roundbutton_div.UseVisualStyleBackColor = False
         '
-        'Roundbutton12
-        '
-        Me.Roundbutton12.BackColor = System.Drawing.Color.LightGray
-        Me.Roundbutton12.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Roundbutton12.FlatAppearance.BorderSize = 0
-        Me.Roundbutton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Roundbutton12.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Roundbutton12.Location = New System.Drawing.Point(14, 182)
-        Me.Roundbutton12.Name = "Roundbutton12"
-        Me.Roundbutton12.Size = New System.Drawing.Size(53, 53)
-        Me.Roundbutton12.TabIndex = 53
-        Me.Roundbutton12.Text = "1/x"
-        Me.Roundbutton12.UseVisualStyleBackColor = False
-        '
-        'Label_limparaac
-        '
-        Me.Label_limparaac.AutoSize = True
-        Me.Label_limparaac.BackColor = System.Drawing.Color.Black
-        Me.Label_limparaac.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label_limparaac.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label_limparaac.ForeColor = System.Drawing.Color.White
-        Me.Label_limparaac.Location = New System.Drawing.Point(212, 77)
-        Me.Label_limparaac.Name = "Label_limparaac"
-        Me.Label_limparaac.Size = New System.Drawing.Size(40, 24)
-        Me.Label_limparaac.TabIndex = 54
-        Me.Label_limparaac.Text = "AC"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -566,6 +567,7 @@ Partial Class Form1
         Me.Controls.Add(Me.PictureBox_limpar)
         Me.Cursor = System.Windows.Forms.Cursors.Hand
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Calculator"

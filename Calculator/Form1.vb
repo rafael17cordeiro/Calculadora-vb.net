@@ -478,9 +478,8 @@ Public Class Form1
         Form2.Show()
     End Sub
 
-    Private Sub Roundbutton12_Click(sender As Object, e As EventArgs)
 
-    End Sub
+
 
     Private Sub Roundbutton12_Click_1(sender As Object, e As EventArgs) Handles Roundbutton12.Click
         Label_res.Text = 1 / Label_res.Text
