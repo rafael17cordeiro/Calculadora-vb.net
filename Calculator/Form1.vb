@@ -496,6 +496,8 @@ Public Class Form1
         Label_sinal.Text = ""
     End Sub
 
+
+
     Private Sub Roundbutton10_Click(sender As Object, e As EventArgs) Handles Roundbutton10.Click
         elevado = Label_res.Text
         Label_res.Text = elevado * elevado

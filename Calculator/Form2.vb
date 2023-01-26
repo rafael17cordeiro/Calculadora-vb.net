@@ -265,7 +265,7 @@ Public Class Form2
 
 
         '-----------------------Fim secção Mega bytes ------------------
-        If ComboBox_bytes1.SelectedIndex = 2 Then
+        If ComboBox_bytes1.SelectedIndex = 3 Then
             Select Case ComboBox_bytes2.SelectedIndex
                 Case 0
                     Label13.Text = valor * (1024 * 1024 * 1024) & " Bytes"
@@ -282,7 +282,7 @@ Public Class Form2
 
 
         '-----------------------Fim secção gigabyes ----------------------
-        If ComboBox_bytes1.SelectedIndex = 2 Then
+        If ComboBox_bytes1.SelectedIndex = 4 Then
             Select Case ComboBox_bytes2.SelectedIndex
                 Case 0
                     Label13.Text = valor * 1000000000000 & " Bytes"
