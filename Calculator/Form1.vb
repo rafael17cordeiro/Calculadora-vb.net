@@ -161,7 +161,7 @@ Public Class Form1
         num = Label_res.Text
         If add <> 1 And dividir <> 1 And vezes <> 1 Then
             If subs = 1 Then
-                Label_hist.Text = num & " - "
+                Label_hist.Text = num & "-"
                 Label_sinal.Text = "-"
                 Label_res.Text = 0
             ElseIf subs > 1 Then
@@ -175,12 +175,12 @@ Public Class Form1
             Label_res.Text = 0
             add = 0
         ElseIf dividir >= 1 Then
-            Label_hist.Text = Val(Label_hist.Text) / num & " - "
+            Label_hist.Text = Val(Label_hist.Text) / num & "-"
             Label_sinal.Text = "-"
             Label_res.Text = 0
             dividir = 0
         ElseIf vezes >= 1 Then
-            Label_hist.Text = Val(Label_hist.Text) * num & " - "
+            Label_hist.Text = Val(Label_hist.Text) * num & "-"
             Label_sinal.Text = "-"
             Label_res.Text = 0
             vezes = 0
@@ -252,7 +252,7 @@ Public Class Form1
             Label_res.Text = Val(Label_hist.Text) + num
             add = 0
         ElseIf subs >= 1 Then
-            Label_hist.Text = Val(Label_hist.Text) & "" & -num & "="
+            Label_hist.Text = Val(Label_hist.Text) & "-" & -num & "="
             Label_res.Text = Val(Label_hist.Text) - num
             subs = 0
         ElseIf dividir >= 1 Then
