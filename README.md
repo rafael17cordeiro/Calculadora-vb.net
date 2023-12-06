@@ -20,4 +20,4 @@ Welcome to the VB.NET Calculator repository! This project houses a comprehensive
 
 🖥️ **Responsive Interface:** Enjoy a user-friendly and responsive interface designed for easy navigation and efficient calculation execution.
 
-### This repository contains the source code for the VB.NET calculator, providing insights into the implementation of various mathematical operations and user interface design.
+#### This repository contains the source code for the VB.NET calculator, providing insights into the implementation of various mathematical operations and user interface design.
