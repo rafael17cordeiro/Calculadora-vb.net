@@ -1,23 +1,25 @@
-# VB.NET Calculator Repository 
+# VB.NET Calculator
 
-Welcome to the VB.NET Calculator repository! This project houses a comprehensive calculator application built using VB.NET, providing a range of mathematical functionalities in a user-friendly interface.
-### <a href="https://github.com/rafael17cordeiro/Calculadora-vb.net.git">Calculator</a>
-![Untitled-1](https://user-images.githubusercontent.com/59150464/213033687-a64da807-5fae-49b0-bf3e-36fde33ef13a.jpg)
+Welcome to the VB.NET Calculator repository. This project contains a fully functional calculator application developed in VB.NET, designed to perform a wide range of mathematical operations through an intuitive and responsive user interface.
 
+## Features
 
+- **Basic Arithmetic Operations:** Addition, subtraction, multiplication, and division with accurate results.
+- **Memory Functions:** Store and recall values to facilitate ongoing calculations.
+- **Scientific Functions:** Includes advanced operations such as square root, exponentiation, and trigonometric functions.
+- **Calculation History:** Keep track of previous calculations for reference.
+- **Clear Functionality:** Easily reset the calculator display for new operations.
+- **Responsive UI:** Clean and user-friendly interface optimized for smooth user experience.
 
+## Demo
 
+![Calculator Screenshot](https://user-images.githubusercontent.com/59150464/213033687-a64da807-5fae-49b0-bf3e-36fde33ef13a.jpg)
 
-## Key Features:
+## Getting Started
 
- **Arithmetic Operations:** Perform basic arithmetic calculations such as addition, subtraction, multiplication, and division with ease.
+To run this project, you need to have Visual Studio with VB.NET support installed.
 
- **Memory Functions:** Utilize memory functions to store and recall values for continued calculations.
+Clone the repository:
 
- **Scientific Functions:** Explore advanced mathematical functions like square root, exponentiation, trigonometric calculations, and more.
-
- **History and Clear Function:** Access a history of calculations performed and conveniently clear the display for new calculations.
-
- **Responsive Interface:** Enjoy a user-friendly and responsive interface designed for easy navigation and efficient calculation execution.
-
-#### This repository contains the source code for the VB.NET calculator, providing insights into the implementation of various mathematical operations and user interface design 🚀
+```bash
+git clone https://github.com/rafael17cordeiro/Calculadora-vb.net.git
